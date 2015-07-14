@@ -14,7 +14,7 @@ public class Hello_world
         // initialise instance variables
       public static void main(String[] args)
     {
-        System.out.println("Hello World! From Steve"); //Display the string
+        System.out.println("Hello World! From Steve day 2"); //Display the string
    
 
     }
