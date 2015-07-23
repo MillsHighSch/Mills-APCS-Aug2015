@@ -1,10 +1,16 @@
 package src.fracCalc;
+import java.util.*;  //for input scanner
 
 public class FracCalc {
 
     public static void main(String[] args) 
     {
         // TODO: Read the input from the user and call produceAnswer with an equation
+        Scanner console = new Scanner(System.in);
+        
+        System.out.println("Please enter first fraction input: ");
+        String fraction = console.nextLine();
+        
 
     }
     
