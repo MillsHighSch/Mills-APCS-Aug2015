@@ -54,24 +54,41 @@ public class FracCalc {
             }
         }    
 
-        String oper = null;
-        String input1=null;
-        String input2=null;
 
-        // Split the fraction into first phrase, operator, and second phrase
-        for (int i=0;i<input.length();i++){
-            if (input.charAt(i)=='+' || input.charAt(i)=='-' || input.charAt(i)=='*' || input.charAt(i)=='/'){
-                oper = input.substring(i,i+1);
-                input1 = input.substring(0,i);
-                input2 = input.substring(i+1,input.length());
-                i=input.length();
-            }
-        }
-        System.out.println(input1 + "..." + oper + "..." + input2);
+        // Split the fraction into operator, first fraction, and second phrase
+        String [] parsed = new String [2];
+        parsed = parse_input(input);
+        String operator = parsed [0];
+        
+        System.out.println(parsed[1] + "..." + operator + "..." + parsed[2]);
+        //Check and fix problem with / used for fraction and division -- which is which?
 
         return "";
     }
 
     // TODO: Fill in the space below with any helper methods that you think you will need
 
+    // This is driver for writing test routines
+    public static void tester(){
+    String [][] parsed = new String [2][3];
+    parsed[0] = parse_input("33+44");
+    parsed[1] = parse_input("55-66");
+    System.out.println(parsed[0][0]);
+    System.out.println(parsed[0][1]);
+    System.out.println(parsed[0][2]);
+}
+
+// Returns string with operator, first fraction, second fraction strings
+public static String[] parse_input(String input){
+    String [] parsed = new String [3];
+    for (int i=0;i<input.length();i++){
+            if (input.charAt(i)=='+' || input.charAt(i)=='-' || input.charAt(i)=='*' || input.charAt(i)=='/'){
+                parsed[0] = input.substring(i,i+1);
+                parsed[1] = input.substring(0,i);
+                parsed[2] = input.substring(i+1,input.length());
+                i=input.length();
+            }
+    }
+    return parsed;
+}
 }
