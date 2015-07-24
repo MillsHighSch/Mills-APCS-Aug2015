@@ -10,10 +10,11 @@ public class Factorial
    
     public static void main(String[] args)
     {
-        final int NUM_FACTS = 100;
-        for (int i = 0; i < NUM_FACTS; i++){
-            System.out.println(i + "! is ");
-            System.out.printf("%14.4e", factorial(i));
+        final int NUM_FACTS = 25;
+        for (int i = 1; i < NUM_FACTS; i++){
+            System.out.printf("%3d! is %14.4e\n",i,factorial(i));
+            //System.out.println(i + "! is ");
+            //System.out.printf("%14.4e", factorial(i));
         }
     }
     public static double factorial(int n)
