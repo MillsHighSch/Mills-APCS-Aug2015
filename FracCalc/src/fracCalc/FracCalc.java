@@ -46,6 +46,8 @@ public class FracCalc {
     public static String produceAnswer(String input)
     { 
         // TODO: Implement this function to produce the solution to the input
+        
+        // TODO: Find and convert / as operator to # to remove ambiguity
 
         //Remove spaces from the string
         for (int k=0;k<input.length();k++){
@@ -61,6 +63,8 @@ public class FracCalc {
         String operator = parsed [0];
         
         System.out.println(parsed[1] + "..." + operator + "..." + parsed[2]);
+        
+        
         //Check and fix problem with / used for fraction and division -- which is which?
 
         return "";
@@ -70,12 +74,7 @@ public class FracCalc {
 
     // This is driver for writing test routines
     public static void tester(){
-    String [][] parsed = new String [2][3];
-    parsed[0] = parse_input("33+44");
-    parsed[1] = parse_input("55-66");
-    System.out.println(parsed[0][0]);
-    System.out.println(parsed[0][1]);
-    System.out.println(parsed[0][2]);
+    
 }
 
 // Returns string with operator, first fraction, second fraction strings
@@ -91,4 +90,17 @@ public static String[] parse_input(String input){
     }
     return parsed;
 }
+
+// Returns array with whole number, numerator, and denominator as integers
+public static int [] parse_fraction(String input){
+    int values [] = new int [3];
+    for (int i=0; i<input.length();i=++){
+        if (input.charAt(i)=='-'){
+            values[0] = input.substring(0,i);
+            // todo: convert above to integer
+            input = input.substring(i+1,input.length());
+            i=input.length();
+        }
+        For (int i=0; i<input.length(),i++){
+            if (input.charAt(i)=='/'){
 }
