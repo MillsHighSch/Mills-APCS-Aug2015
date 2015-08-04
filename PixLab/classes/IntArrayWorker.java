@@ -10,7 +10,57 @@ public class IntArrayWorker
   {
     matrix = theMatrix;
   }
+  /** 
+   * Exercise #1 on Page 9
+   * new getCount method to return the number of times the passed integer appears in the matrix
+   */ 
+  public int getCount(int target){
+     int count = 0;
+      for (int[] rowArray : matrix)
+    {
+      for (int item : rowArray)
+      {
+          if (item == target)
+          {
+              count = count +1;
+          }
+      }
+    }
+    return count;
+  }
+  /** 
+   * Exercise #2 on Page 9
+   * new getLargest method return the largest value in the matrix
+   */ 
+  public int getLargest(){
+     int largest = -1;
+      for (int[] rowArray : matrix)
+    {
+      for (int item : rowArray)
+      {
+          if (item > largest)
+          {
+              largest = item;
+          }
+      }
+    }
+    return largest;
+  }
+  /**
+   * Exercise #3 on Page 9
+   * new getColTotal method returns total of all integers in a specified column
+   */
+  public int getColTotal(int targetCol)
+  {
+    int total = 0;
+    for (int row = 0; row < matrix.length; row++)
+    {
+      total = total + matrix [row][targetCol];
+    }
+    return total;
+  }
   
+ 
   /**
    * Method to return the total 
    * @return the total of the values in the array
