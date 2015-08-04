@@ -98,6 +98,15 @@ public class PictureTester
     caterpillar.explore();
   }
   
+  /** Method to test mirrorArms */
+  public static void testMirrorArms()
+  {
+    Picture snowman = new Picture("snowman.jpg");
+    snowman.explore();
+    snowman.mirrorArms();
+    snowman.explore();
+  }
+  
   /** Method to test mirrorTemple */
   public static void testMirrorTemple()
   {
@@ -105,6 +114,33 @@ public class PictureTester
     temple.explore();
     temple.mirrorTemple();
     temple.explore();
+  }
+  
+  /** Method to test mirrorGull */
+  public static void testMirrorGull()
+  {
+    Picture seagull = new Picture("seagull.jpg");
+    seagull.explore();
+    seagull.mirrorGull();
+    seagull.explore();
+  }
+  
+  /** Method to test copy */
+  public static void testCopy()
+  {
+    Picture beach = new Picture("beach.jpg");
+    Picture newBeach = new Picture();
+    beach.explore();
+    newBeach.copy(beach,160,255,300,400,10,10);
+    newBeach.explore();
+  }
+  
+  /** Method to test the myCollage method */
+  public static void testMyCollage()
+  {
+    Picture canvas = new Picture(960,1280);
+    canvas.myCollage();
+    canvas.explore();
   }
   
   /** Method to test the collage method */
@@ -117,6 +153,15 @@ public class PictureTester
   
   /** Method to test edgeDetection */
   public static void testEdgeDetection()
+  {
+    Picture swan = new Picture("kids.jpg");
+    swan.edgeDetection(10);
+    swan.explore();
+  }
+  
+  
+  /** Method to test edgeDetection on both rows and columns */
+  public static void testEdgeDetection2()
   {
     Picture swan = new Picture("swan.jpg");
     swan.edgeDetection(10);
@@ -145,11 +190,14 @@ public class PictureTester
     //testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();
-    testMirrorDiagonal();
-    //testCollage();
+    //testMirrorDiagonal();
+   // testMirrorArms();
+    //testMirrorGull();
+   // testCollage();
     //testCopy();
-    //testEdgeDetection();
-    //testEdgeDetection2();
+    //testMyCollage();
+    testEdgeDetection();
+    testEdgeDetection2();
     //testChromakey();
     //testEncodeAndDecode();
     //testGetCountRedOverValue(250);
