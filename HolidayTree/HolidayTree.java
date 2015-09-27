@@ -22,13 +22,10 @@ public class HolidayTree
          */
         for (int i = 1; i <= numSegments; i++){  // repeat based on number of segments to print
             for (int j=1; j <= segmentHeight; j++){
-                int stars = 2 * ( i + j) - 3; 
-                for (int k=1; k <= (center - ((stars+1)/2)); k++){
-                    System.out.print(" ");
-                }
-                for (int m=1; m <= stars; m++){
-                    System.out.print("*");
-                }
+                int stars = 2 * ( i + j) - 3;
+                writeSpaces(center - ((stars+1)/2));
+                writeStars(stars);
+                
                 System.out.println("");
             }
         }
@@ -37,16 +34,25 @@ public class HolidayTree
          */
         printTrunk(center);
         printTrunk(center);
-        for (int i=1; i <= center - 4; i++){
+        writeSpaces(center - 4);
+        writeStars(7);
+        System.out.println("");
+    }
+
+    public static void writeSpaces(int numSpaces){
+        for (int i=1; i <= numSpaces; i++){
             System.out.print(" ");
         }
-        System.out.println("*******");
+    }
+
+    public static void writeStars(int numStars){
+        for (int i=1; i <= numStars; i++){
+            System.out.print("*");
+        }
     }
 
     public static void printTrunk(int center){  //method to print the trunk in the right place
-        for (int i=1; i <= center -1; i++){
-            System.out.print(" ");
-        }
+        writeSpaces(center - 1);
         System.out.println("*");
     }
 
