@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.params=args
+comment0.target=void\ main(java.lang.String[])
+comment1.params=yourName
+comment1.target=void\ secondMethod(java.lang.String)
+comment1.text=\n\ Create\ and\ call\ sencond\ method\ to\ demonstrate\ it\ can\ create\ \n\ another\ Scanner\ object\ called\ console2\n\ We\ pass\ name\ into\ this\ object.\n
+numComments=2
