@@ -11,24 +11,24 @@ public class Oct29_DoNow
    {
        int x = 2;
        int y = 3;
-       if (x++ + 1 == 3 && x == y++){
-           if (x < y++ || y > 5 && true ) {
+       if (x++ * 2 - 1 == 3 && x == y++){
+           if (x < y++ || y > 10 / 2 - 1 && true ) {
                x--;
                y++;
             }
             y++;
         }
-        else if (x == 2){
-            if (x < y++) {
+        else if (x == 2 && x * y < 10){
+            if (x < y++ || 2 * y == 6) {
                 x--;
             }
             else {
-                x--;
+                x+=3;
             }
         }
         else{
             y--;
         }
-        System.out.println("x is: " + x + " and y is: " + y);
+        System.out.println(x + y);
     }
 }
