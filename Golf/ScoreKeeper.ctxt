@@ -1,8 +1,10 @@
 #BlueJ class context
-comment0.params=hole\ par\ score
-comment0.target=void\ holeScore(int,\ int,\ int)
-comment0.text=\n\ use\ results\ from\ each\ hole,\ add\ to\ cumulative\ totals,\ then\ print\ relative\ to\ par\ \n\ for\ each\ hole\n
-comment1.params=
-comment1.target=void\ finalTally()
-comment1.text=\n\ Use\ the\ final\ tallies\ to\ print\ out\ how\ the\ golfer\ did\ on\ the\ entire\ round.\n
-numComments=2
+comment0.params=golferName
+comment0.target=ScoreKeeper(java.lang.String)
+comment1.params=hole\ par\ score
+comment1.target=void\ holeScore(int,\ int,\ int)
+comment1.text=\n\ use\ results\ from\ each\ hole,\ add\ to\ cumulative\ totals,\ then\ print\ relative\ to\ par\ \n\ for\ each\ hole\n
+comment2.params=
+comment2.target=void\ finalTally()
+comment2.text=\n\ Use\ the\ final\ tallies\ to\ print\ out\ how\ the\ golfer\ did\ on\ the\ entire\ round.\n
+numComments=3
