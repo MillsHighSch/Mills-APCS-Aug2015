@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=hole\ par\ score
+comment0.target=void\ holeScore(int,\ int,\ int)
+comment0.text=\n\ use\ results\ from\ each\ hole,\ add\ to\ cumulative\ totals,\ then\ print\ relative\ to\ par\ \n\ for\ each\ hole\n
+comment1.params=
+comment1.target=void\ finalTally()
+comment1.text=\n\ Use\ the\ final\ tallies\ to\ print\ out\ how\ the\ golfer\ did\ on\ the\ entire\ round.\n
+numComments=2
