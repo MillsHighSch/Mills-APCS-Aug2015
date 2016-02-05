@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=
+comment0.target=MooMoo()
+comment1.params=animal\ call
+comment1.target=MooMoo(java.lang.String,\ java.lang.String)
+comment2.params=y
+comment2.target=void\ setSound(java.lang.String)
+comment3.params=y
+comment3.target=java.lang.String\ getSound(int)
+numComments=4
