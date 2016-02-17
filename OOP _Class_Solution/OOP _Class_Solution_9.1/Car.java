@@ -3,7 +3,7 @@
  * Class Solution to demonstrate OOP
  * Chapter 9.1
  */
-public class Car
+public class Car extends Vehicles
 {
     // instance variables
     private int year;
@@ -20,9 +20,10 @@ public class Car
     }
 
     /*
-     * Constructor for special form of class Car
+     * Constructor for special form of class Car for new car
      */
-    public Car(int year, String make){
+    public Car(String color, int year, String make){
+        super(color);
         this.smogChecked = true;
         this.year = year;
         this.make = make;
@@ -37,5 +38,13 @@ public class Car
             System.out.println("Hey buddy, go get the smog check done. Fix the car if you need to");
             this.smogChecked = true;
         }
+    }
+    /*
+     * toString method for car
+     */
+    public String toString(){
+        String output = "Make: " + this.make + " Year: " + this.year +
+         super.toString();
+        return output;
     }
 }
